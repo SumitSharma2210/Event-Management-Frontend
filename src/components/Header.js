@@ -15,26 +15,33 @@ const Header = () => {
       style={{
         backgroundColor: "#007BFF",
         color: "#fff",
-        padding: "10px 20px",
+        padding: "15px 20px",
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <nav style={{ display: "flex", gap: "15px" }}>
+      <nav
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "20px",
+        }}
+      >
         <Link
           to="/"
           style={{
             color: "#fff",
             textDecoration: "none",
-            fontSize: "18px",
+            fontSize: "20px",
             fontWeight: "bold",
+            textAlign: "center",
           }}
         >
           Event Management Platform Dashboard
         </Link>
-        {token ? (
+        {token && (
           <button
             onClick={handleLogout}
             style={{
@@ -53,26 +60,6 @@ const Header = () => {
           >
             Logout
           </button>
-        ) : (
-          <Link
-            to="/login"
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#28A745",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              fontSize: "16px",
-              fontWeight: "bold",
-              textDecoration: "none",
-              cursor: "pointer",
-              transition: "background-color 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#3CCF5C")}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = "#28A745")}
-          >
-            Login
-          </Link>
         )}
       </nav>
     </header>

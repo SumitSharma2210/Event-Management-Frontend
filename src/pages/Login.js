@@ -35,12 +35,22 @@ const Login = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
+        minHeight: "100vh",
         backgroundColor: "#f5f5f5",
         fontFamily: "Arial, sans-serif",
       }}
     >
-      <h1 style={{ color: "#333", marginBottom: "20px" }}>Login</h1>
+      <h1
+        style={{
+          fontSize: "3rem",
+          fontWeight: "bold",
+          color: "#333",
+          textAlign: "center",
+          marginBottom: "40px",
+        }}
+      >
+        Event Management Platform
+      </h1>
       <form
         onSubmit={handleLogin}
         style={{
@@ -142,6 +152,42 @@ const Login = () => {
           </button>
         </div>
       </form>
+      <footer
+        style={{
+          position: "fixed",
+          bottom: "0",
+          left: "0",
+          width: "100%",
+          backgroundColor: "#333",
+          color: "#fff",
+          textAlign: "center",
+          padding: "10px 0",
+          fontSize: "14px",
+        }}
+      >
+        <p>
+          <a
+            href="https://github.com/SumitSharma2210"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#4CAF50",
+              textDecoration: "none",
+              marginRight: "15px",
+            }}
+          >
+            My GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sumit-sharma-a13995281/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#2196F3", textDecoration: "none" }}
+          >
+            LinkedIn
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };
