@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "https://event-management-backend-51us.onrender.com";
+const apiUrl = "https://event-management-backend-51us.onrender.com/api";
 
 console.log("API URL being used:", apiUrl);
 
