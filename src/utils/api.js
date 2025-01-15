@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+
+console.log("API URL being used:", apiUrl);
 
 export const fetchEvents = async () => {
   try {
@@ -26,6 +28,7 @@ export const deleteEvent = async (id) => {
     });
     return response;
   } catch (err) {
+    console.error("Error in deleteEvent:", err);
     throw err;
   }
 };
@@ -39,6 +42,7 @@ export const createEvent = async (eventData) => {
     });
     return response;
   } catch (err) {
+    console.error("Error in createEvent:", err);
     throw err;
   }
 };
@@ -51,14 +55,17 @@ export const login = async (email, password) => {
     });
     return response;
   } catch (err) {
+    console.error("Error in login:", err);
     throw err;
   }
 };
+
 export const guestLogin = async () => {
   try {
     const response = await axios.post(`${apiUrl}/auth/guestLogin`);
     return response;
   } catch (err) {
+    console.error("Error in guestLogin:", err);
     throw err;
   }
 };
@@ -72,6 +79,7 @@ export const register = async (username, email, password) => {
     });
     return response;
   } catch (err) {
+    console.error("Error in register:", err);
     throw err;
   }
 };
