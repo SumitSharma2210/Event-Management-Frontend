@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const apiUrl = "https://event-management-backend-51us.onrender.com";
 
 console.log("API URL being used:", apiUrl);
 
