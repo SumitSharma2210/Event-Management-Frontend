@@ -65,7 +65,7 @@ const Home = () => {
           marginBottom: "20px",
         }}
       >
-        Events
+        Upcoming Events
       </h1>
       {userRole !== "guest" && (
         <div

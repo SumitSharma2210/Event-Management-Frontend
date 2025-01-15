@@ -84,56 +84,63 @@ const Login = () => {
             fontSize: "16px",
           }}
         />
-        <button
-          type="submit"
+        <div
           style={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: "10px",
             width: "100%",
-            padding: "10px",
-            margin: "10px 0",
-            backgroundColor: "#4CAF50",
-            color: "#fff",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-            fontSize: "16px",
           }}
         >
-          Login
-        </button>
-        <button
-          type="button"
-          onClick={handleGuestLogin}
-          style={{
-            width: "100%",
-            padding: "10px",
-            margin: "10px 0",
-            backgroundColor: "#2196F3",
-            color: "#fff",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
-        >
-          Guest Login
-        </button>
-        <button
-          type="button"
-          onClick={() => navigate("/register")}
-          style={{
-            width: "100%",
-            padding: "10px",
-            margin: "10px 0",
-            backgroundColor: "#f44336",
-            color: "#fff",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
-        >
-          Register
-        </button>
+          <button
+            type="submit"
+            style={{
+              flex: "1",
+              padding: "10px",
+              backgroundColor: "#4CAF50",
+              color: "#fff",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            onClick={handleGuestLogin}
+            style={{
+              flex: "1",
+              padding: "10px",
+              backgroundColor: "#2196F3",
+              color: "#fff",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          >
+            Guest Login
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate("/register")}
+            style={{
+              flex: "1",
+              padding: "10px",
+              backgroundColor: "#f44336",
+              color: "#fff",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          >
+            Register
+          </button>
+        </div>
       </form>
     </div>
   );
